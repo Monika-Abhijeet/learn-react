@@ -8,4 +8,5 @@
 .form-container {
   background-color: aqua;
   margin: 20px;
+  float: left;
 }

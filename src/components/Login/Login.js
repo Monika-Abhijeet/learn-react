@@ -4,10 +4,11 @@ function Login() {
   return (
     <div className="login-container">
       <h1>Login Screen</h1>
-      {/* <form className="form form-container">
+      <form className="form form-container">
         <label htmlFor="userId" className="form-label">
           Userid
         </label>
+
         <input
           type="text"
           name="userId"
@@ -15,12 +16,13 @@ function Login() {
           className="form-control"
           placeholder="enter your user id"
         />
-        <label>password</label>
+        <label htmlFor="password" className="form-label">
+          Password
+        </label>
+        <input type="password" name="password" className="form-control"></input>
 
-        <input type="password" name="password"></input>
-
-        <button className="btn btn-danger">Login</button>
-      </form> */}
+        <button className="btn btn-primary">Login</button>
+      </form>
     </div>
   );
 }
