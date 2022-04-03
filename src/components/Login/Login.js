@@ -1,5 +1,7 @@
 import React from "react";
 import "./Login.css";
+import Button from "@material-ui/core/Button";
+import SaveIcon from "@material-ui/icons/Save";
 function Login() {
   return (
     <div className="login-container">
@@ -22,6 +24,9 @@ function Login() {
         <input type="password" name="password" className="form-control"></input>
 
         <button className="btn btn-primary">Login</button>
+        <Button variant="contained" color="secondary" endIcon={<SaveIcon />}>
+          Trest
+        </Button>
       </form>
     </div>
   );
