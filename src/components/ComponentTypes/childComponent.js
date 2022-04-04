@@ -22,28 +22,43 @@ class ChildComponent extends Component {
     super();
     this.state = {
       title: "State title",
+      count: 15,
     };
   }
   handleClick() {
     alert("this is a child method");
+    console.log("this is child method", this.state.count);
   }
   changeTitle() {
     console.log("title changes");
     this.setState({ title: "title changed" });
   }
+
+  incrementCounter() {
+    this.setState({ count: this.state.count + 1 });
+  }
   render() {
     return (
       <div>
         <h4>received from parent = {this.props.title}</h4>
-        <h4>received from state(same class component) = {this.state.title}</h4>
+        <h1> {this.state.title}</h1>
         <button onClick={() => this.changeTitle()}> Change Title</button>
-        {/* <button onClick={this.changeTitle}> Change Title</button> */}
 
         <button onClick={this.changeTitle.bind(this)}> Change Title</button>
 
-        <button className="btn btn-primary" onClick={this.handleClick}>
+        <button
+          className="btn btn-primary"
+          onClick={this.handleClick.bind(this)}
+        >
           Click me
         </button>
+        <button
+          className="btn btn-warning"
+          onClick={() => this.incrementCounter()}
+        >
+          increment
+        </button>
+        <p> Count is {this.state.count}</p>
       </div>
     );
   }
