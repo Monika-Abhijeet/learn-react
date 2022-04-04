@@ -11,29 +11,56 @@ import Inline from "./components/stylesheets/Inline";
 import "./components/stylesheets/appStyles.css";
 import Styles from "./components/stylesheets/appStyle.module.css";
 import Counter from "./components/Material-ui/counter";
-import { Checkbox } from "@material-ui/core";
+import { Checkbox, Typography } from "@material-ui/core";
 import CheckboxExample from "./components/Material-ui/Checkbox";
+import ButtonStyled from "./components/Material-ui/makeStyles";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import { green, orange } from "@material-ui/core/colors";
+import Button from "@material-ui/core/Button";
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: orange[100],
+      },
+      secondary: {
+        main: green[500],
+      },
+    },
+  });
   return (
     <div className="App">
-      <Header
-        title="Learning basics of react from "
-        tutor="Monika"
-        bgColor="green"
-        color="yellow"
-      ></Header>
-      {/* <h1 className="error">This is an error</h1>
+      <ThemeProvider theme={theme}>
+        <Header
+          title="Learning basics of react from "
+          tutor="Monika"
+          bgColor="green"
+          color="yellow"
+        ></Header>
+        <ButtonStyled></ButtonStyled>
+        <h2>Testing typography</h2>
+        <Button variant="contained" color="secondary" size="small">
+          Click me
+        </Button>
+        <Button variant="contained" color="primary">
+          Click me
+        </Button>
+        <Button variant="contained" color="secondary" size="large">
+          Click me
+        </Button>
+        {/* <h1 className="error">This is an error</h1>
       <h1 className={Styles.success}>This is an success message</h1> */}
-      <Counter></Counter>
-      <CheckboxExample></CheckboxExample>
-      {/* <Inline></Inline>
+        {/* <Counter></Counter>
+      <CheckboxExample></CheckboxExample> */}
+        {/* <Inline></Inline>
       <Stylesheet primary={false}></Stylesheet>
       <Stylesheet primary={true}></Stylesheet> */}
 
-      {/* <MaterialDesign></MaterialDesign> */}
-      {/* <Users></Users> */}
-      {/* <ClassComponent></ClassComponent> */}
-      {/* <FunctionComponent></FunctionComponent> */}
+        {/* <MaterialDesign></MaterialDesign> */}
+        {/* <Users></Users> */}
+        {/* <ClassComponent></ClassComponent> */}
+        {/* <FunctionComponent></FunctionComponent> */}
+      </ThemeProvider>
     </div>
   );
 }
