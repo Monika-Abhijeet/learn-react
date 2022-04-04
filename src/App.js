@@ -11,6 +11,8 @@ import Inline from "./components/stylesheets/Inline";
 import "./components/stylesheets/appStyles.css";
 import Styles from "./components/stylesheets/appStyle.module.css";
 import Counter from "./components/Material-ui/counter";
+import { Checkbox } from "@material-ui/core";
+import CheckboxExample from "./components/Material-ui/Checkbox";
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
       {/* <h1 className="error">This is an error</h1>
       <h1 className={Styles.success}>This is an success message</h1> */}
       <Counter></Counter>
+      <CheckboxExample></CheckboxExample>
       {/* <Inline></Inline>
       <Stylesheet primary={false}></Stylesheet>
       <Stylesheet primary={true}></Stylesheet> */}
