@@ -18,11 +18,12 @@ import React, { Component } from "react";
 // }
 
 class ChildComponent extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: "State title",
       count: 15,
+      name: this.props.name,
     };
   }
   handleClick() {
@@ -36,6 +37,10 @@ class ChildComponent extends Component {
 
   incrementCounter() {
     this.setState({ count: this.state.count + 1 });
+  }
+  updateName(event) {
+    console.log(event.target.value);
+    this.setState({ name: event.target.value });
   }
   render() {
     return (
@@ -59,6 +64,20 @@ class ChildComponent extends Component {
           increment
         </button>
         <p> Count is {this.state.count}</p>
+        <label>Name</label>
+        <input
+          type="text"
+          value={this.state.name}
+          onChange={(e) => this.updateName(e)}
+        />
+        <p>My name is {this.state.name}</p>
+        <h3>{this.props.greet}</h3>
+        <button
+          className="btn btn-danger"
+          onClick={() => this.props.sayHello()}
+        >
+          welcom
+        </button>
       </div>
     );
   }

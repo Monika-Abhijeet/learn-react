@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import React from "react";
 import ClassComponent from "./components/ComponentTypes/classComponent";
 import FunctionComponent from "./components/ComponentTypes/functionComponent";
+import Users from "./components/Users/Users";
 function App() {
   return (
     <div className="App">
@@ -13,8 +14,9 @@ function App() {
         bgColor="green"
         color="yellow"
       ></Header>
+      <Users></Users>
       {/* <ClassComponent></ClassComponent> */}
-      <FunctionComponent></FunctionComponent>
+      {/* <FunctionComponent></FunctionComponent> */}
     </div>
   );
 }
