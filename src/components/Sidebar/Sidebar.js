@@ -35,7 +35,7 @@ class Sidebar extends Component {
   componentWillUnmount() {}
 
   render() {
-    return <div>{this.props.content}</div>;
+    return <div class="sidebar-container">{this.props.content}</div>;
   }
 }
 

@@ -2,6 +2,8 @@ import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import React from "react";
+import ClassComponent from "./components/ComponentTypes/classComponent";
+import FunctionComponent from "./components/ComponentTypes/functionComponent";
 function App() {
   return (
     <div className="App">
@@ -11,12 +13,8 @@ function App() {
         bgColor="green"
         color="yellow"
       ></Header>
-      <Sidebar
-        content="hello!! this a sidebar"
-        bgColor="yellow"
-        color="red"
-      ></Sidebar>
-      <Login></Login>
+      {/* <ClassComponent></ClassComponent> */}
+      <FunctionComponent></FunctionComponent>
     </div>
   );
 }
