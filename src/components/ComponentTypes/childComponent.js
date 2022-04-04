@@ -29,14 +29,17 @@ class ChildComponent extends Component {
   }
   changeTitle() {
     console.log("title changes");
-    // this.setState({ title: "heleo" });
+    this.setState({ title: "title changed" });
   }
   render() {
     return (
       <div>
         <h4>received from parent = {this.props.title}</h4>
         <h4>received from state(same class component) = {this.state.title}</h4>
-        <button onClick={this.changeTitle}> Change Title</button>
+        <button onClick={() => this.changeTitle()}> Change Title</button>
+        {/* <button onClick={this.changeTitle}> Change Title</button> */}
+
+        <button onClick={this.changeTitle.bind(this)}> Change Title</button>
 
         <button className="btn btn-primary" onClick={this.handleClick}>
           Click me
