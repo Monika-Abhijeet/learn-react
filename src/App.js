@@ -21,6 +21,7 @@ import ContainerExample from "./components/Material-ui/Container";
 import GridComponent from "./components/Material-ui/GridComponent";
 import AppBarComponent from "./components/Material-ui/AppBarComponent";
 import ParentComp from "./components/PureComponentDemo/ParentComponent";
+import ParentError from "./components/ErrorHandling/parentError";
 function App() {
   const theme = createTheme({
     palette: {
@@ -34,12 +35,16 @@ function App() {
   });
   return (
     <div className="App">
-      <ParentComp></ParentComp>
+      <ParentError></ParentError>
+      {/* <ParentComp></ParentComp> */}
+      {/* App bar component => appbar shoul always have toolbar */}
       {/* <AppBarComponent></AppBarComponent> */}
       {/* <GridComponent></GridComponent> */}
       {/* <ContainerExample></ContainerExample> */}
       {/* <AppExample></AppExample> */}
       {/* <GridComponent></GridComponent> */}
+
+      {/* material ui demo */}
       {/* <ThemeProvider theme={theme}>
         <Header
           title="Learning basics of react from "
