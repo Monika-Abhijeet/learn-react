@@ -17,6 +17,9 @@ import ButtonStyled from "./components/Material-ui/makeStyles";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import { green, orange } from "@material-ui/core/colors";
 import Button from "@material-ui/core/Button";
+import ContainerExample from "./components/Material-ui/Container";
+import GridComponent from "./components/Material-ui/GridComponent";
+import AppBarComponent from "./components/Material-ui/AppBarComponent";
 function App() {
   const theme = createTheme({
     palette: {
@@ -30,7 +33,12 @@ function App() {
   });
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
+      {/* <AppBarComponent></AppBarComponent> */}
+      <GridComponent></GridComponent>
+      {/* <ContainerExample></ContainerExample> */}
+      {/* <AppExample></AppExample> */}
+      {/* <GridComponent></GridComponent> */}
+      {/* <ThemeProvider theme={theme}>
         <Header
           title="Learning basics of react from "
           tutor="Monika"
@@ -47,20 +55,20 @@ function App() {
         </Button>
         <Button variant="contained" color="secondary" size="large">
           Click me
-        </Button>
-        {/* <h1 className="error">This is an error</h1>
+        </Button> */}
+      {/* <h1 className="error">This is an error</h1>
       <h1 className={Styles.success}>This is an success message</h1> */}
-        {/* <Counter></Counter>
+      {/* <Counter></Counter>
       <CheckboxExample></CheckboxExample> */}
-        {/* <Inline></Inline>
+      {/* <Inline></Inline>
       <Stylesheet primary={false}></Stylesheet>
       <Stylesheet primary={true}></Stylesheet> */}
 
-        {/* <MaterialDesign></MaterialDesign> */}
-        {/* <Users></Users> */}
-        {/* <ClassComponent></ClassComponent> */}
-        {/* <FunctionComponent></FunctionComponent> */}
-      </ThemeProvider>
+      {/* <MaterialDesign></MaterialDesign> */}
+      {/* <Users></Users> */}
+      {/* <ClassComponent></ClassComponent> */}
+      {/* <FunctionComponent></FunctionComponent> */}
+      {/* </ThemeProvider> */}
     </div>
   );
 }
