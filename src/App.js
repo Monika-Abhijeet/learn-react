@@ -20,6 +20,7 @@ import Button from "@material-ui/core/Button";
 import ContainerExample from "./components/Material-ui/Container";
 import GridComponent from "./components/Material-ui/GridComponent";
 import AppBarComponent from "./components/Material-ui/AppBarComponent";
+import ParentComp from "./components/PureComponentDemo/ParentComponent";
 function App() {
   const theme = createTheme({
     palette: {
@@ -33,8 +34,9 @@ function App() {
   });
   return (
     <div className="App">
+      <ParentComp></ParentComp>
       {/* <AppBarComponent></AppBarComponent> */}
-      <GridComponent></GridComponent>
+      {/* <GridComponent></GridComponent> */}
       {/* <ContainerExample></ContainerExample> */}
       {/* <AppExample></AppExample> */}
       {/* <GridComponent></GridComponent> */}
