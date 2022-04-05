@@ -2,6 +2,7 @@ import React from "react";
 import Counter from "./counter";
 import PersonComp from "./person";
 import ErrorBoundary from "./ErrorBoundary";
+// import ErrorBoundaryCmp from "./ErrorBoundaryNpm";
 
 function ParentError() {
   const Person = {
@@ -13,7 +14,6 @@ function ParentError() {
     <div>
       <ErrorBoundary>
         <PersonComp person={Person} />
-        <PersonComp />
 
         <Counter></Counter>
       </ErrorBoundary>
