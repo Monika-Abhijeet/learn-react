@@ -22,6 +22,7 @@ import GridComponent from "./components/Material-ui/GridComponent";
 import AppBarComponent from "./components/Material-ui/AppBarComponent";
 import ParentComp from "./components/PureComponentDemo/ParentComponent";
 import ParentError from "./components/ErrorHandling/parentError";
+import BasicHook from "./components/hooks/BasicHooks";
 function App() {
   const theme = createTheme({
     palette: {
@@ -35,6 +36,7 @@ function App() {
   });
   return (
     <div className="App">
+      {/* <BasicHook></BasicHook> */}
       <ParentError></ParentError>
       {/* <ParentComp></ParentComp> */}
       {/* App bar component => appbar shoul always have toolbar */}

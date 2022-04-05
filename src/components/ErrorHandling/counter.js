@@ -1,32 +1,28 @@
 import React, { Component } from "react";
+import { useErrorHandler } from "react-error-boundary";
 
-class Counter extends Component {
-  MAX_COUNT_ALLOWED = 5;
-  constructor() {
-    super();
-    this.state = {
-      count: 0,
-    };
-  }
-  incrementCounter = () => {
+function Counter() {
+  const MAX_COUNT_ALLOWED = 5;
+  const [count, setCount] = React.useState(0);
+  const handleError = useErrorHandler();
+  function incrementCounter() {
     try {
-      if (this.state.count === 5) {
+      if (count === 5) {
         throw new Error("count limit exceeded");
       } else {
-        this.setState({ count: this.state.count + 1 });
+        setCount(count + 1);
       }
     } catch (e) {
       console.log(e);
+      handleError(e);
     }
-  };
-  render() {
-    return (
-      <div>
-        Counter value is new {this.state.count}
-        <button onClick={() => this.incrementCounter()}>increment</button>
-      </div>
-    );
   }
+  return (
+    <div>
+      Counter value is new {count}
+      <button onClick={incrementCounter}>increment</button>
+    </div>
+  );
 }
 
 export default Counter;
