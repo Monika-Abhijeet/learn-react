@@ -23,6 +23,8 @@ import AppBarComponent from "./components/Material-ui/AppBarComponent";
 import ParentComp from "./components/PureComponentDemo/ParentComponent";
 import ParentError from "./components/ErrorHandling/parentError";
 import BasicHook from "./components/hooks/BasicHooks";
+import ReactParentHook from "./components/ReactHooks/ReactParentHook";
+// import ParentHook from "./components/hooks/Parent";
 function App() {
   const theme = createTheme({
     palette: {
@@ -36,8 +38,9 @@ function App() {
   });
   return (
     <div className="App">
+      <ReactParentHook></ReactParentHook>
       {/* <BasicHook></BasicHook> */}
-      <ParentError></ParentError>
+      {/* <ParentError></ParentError> */}
       {/* <ParentComp></ParentComp> */}
       {/* App bar component => appbar shoul always have toolbar */}
       {/* <AppBarComponent></AppBarComponent> */}
@@ -45,7 +48,6 @@ function App() {
       {/* <ContainerExample></ContainerExample> */}
       {/* <AppExample></AppExample> */}
       {/* <GridComponent></GridComponent> */}
-
       {/* material ui demo */}
       {/* <ThemeProvider theme={theme}>
         <Header
@@ -72,7 +74,6 @@ function App() {
       {/* <Inline></Inline>
       <Stylesheet primary={false}></Stylesheet>
       <Stylesheet primary={true}></Stylesheet> */}
-
       {/* <MaterialDesign></MaterialDesign> */}
       {/* <Users></Users> */}
       {/* <ClassComponent></ClassComponent> */}

@@ -21,7 +21,7 @@ function ParentError() {
     <div>
       <ErrorBoundary FallbackComponent={Fallback} onerror={errorHandler}>
         <PersonComp person={Person} />
-        <Counter></Counter>
+        <Counter title="this is a counter screen"></Counter>
       </ErrorBoundary>
     </div>
     // this is error boundary for custom error boundary
