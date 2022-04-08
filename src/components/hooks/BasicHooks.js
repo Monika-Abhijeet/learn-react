@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { useState, useReducer, useEffect, useRef } from "react";
 
 // function BasicHook() {
@@ -62,7 +62,7 @@ import { useState, useReducer, useEffect, useRef } from "react";
 // function BasicHook(props) {
 //   useEffect(() => {
 //     console.log("use effect called");
-//   }, [props.counter]);
+//   }, [props.name]);
 //   return (
 //     <div>
 //       basic hook with count {props.counter} and name is {props.name}
@@ -70,17 +70,57 @@ import { useState, useReducer, useEffect, useRef } from "react";
 //   );
 // }
 
-function BasicHook() {
-  const inputRef = useRef(null);
-  function focusElement() {
-    console.log(inputRef.current.value);
-    inputRef.current.focus();
+// function BasicHook() {
+//   const inputRef = useRef(null);
+//   function focusElement() {
+//     console.log(inputRef.current.value);
+//     inputRef.current.focus();
+//   }
+//   return (
+//     <div>
+//       <input type="text" ref={inputRef} />
+//       <button onClick={focusElement}>Clikc</button>
+//     </div>
+//   );
+// }
+
+// function UseRefTutorial() {
+//   const inputRef = useRef(null);
+
+//   function focusInput() {
+//     console.log(inputRef.current.value);
+//     inputRef.current.focus();
+//     inputRef.current.value = "";
+//   }
+//   return (
+//     <div>
+//       <input type="text" ref={inputRef} />
+//       <button
+//         onClick={() => {
+//           focusInput();
+//         }}
+//       >
+//         Focus Input
+//       </button>
+//     </div>
+//   );
+// }
+
+function UseLayoutTutorial() {
+  useEffect(() => {
+    console.log("use effect called");
+  });
+  useLayoutEffect(() => {
+    console.log("use layout effect is called");
+  });
+
+  function delay() {
+    console.log("delay");
+    return setTimeout(() => {
+      console.log("3 sec");
+      return <div> hello</div>;
+    }, 3000);
   }
-  return (
-    <div>
-      <input type="text" ref={inputRef} />
-      <button onClick={focusElement}>Clikc</button>
-    </div>
-  );
+  return <div>{delay()}</div>;
 }
-export default BasicHook;
+export default UseLayoutTutorial;

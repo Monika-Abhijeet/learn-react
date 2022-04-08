@@ -22,9 +22,16 @@ import GridComponent from "./components/Material-ui/GridComponent";
 import AppBarComponent from "./components/Material-ui/AppBarComponent";
 import ParentComp from "./components/PureComponentDemo/ParentComponent";
 import ParentError from "./components/ErrorHandling/parentError";
-import BasicHook from "./components/hooks/BasicHooks";
+import UseLayoutTutorial from "./components/hooks/BasicHooks";
 import ReactParentHook from "./components/ReactHooks/ReactParentHook";
 // import ParentHook from "./components/hooks/Parent";
+import ClickCounter from "./concepts/HOC/Counter";
+import HoverCounter from "./concepts/HOC/HoverCountrer";
+import PostList from "./concepts/Axios/PostList";
+import PostForm from "./concepts/Axios/PostForm";
+// import ImperativeHandle from "./components/hooks/imperativeHandle";
+import ContextTutorial from "./components/hooks/useContext";
+import ParentImperative from "./components/hooks/ImperativeHandle/ParentImperative";
 function App() {
   const theme = createTheme({
     palette: {
@@ -38,7 +45,15 @@ function App() {
   });
   return (
     <div className="App">
-      <ReactParentHook></ReactParentHook>
+      <ParentImperative />
+      {/* <UseLayoutTutorial /> */}
+      {/* <ContextTutorial /> */}
+      {/* <ClickCounter></ClickCounter>
+      <HoverCounter></HoverCounter> */}
+      {/* <PostList /> */}
+      {/* <ImperativeHandle /> */}
+      {/* <PostForm /> */}
+      {/* <ReactParentHook></ReactParentHook> */}
       {/* <BasicHook></BasicHook> */}
       {/* <ParentError></ParentError> */}
       {/* <ParentComp></ParentComp> */}
